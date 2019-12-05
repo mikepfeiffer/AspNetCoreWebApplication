@@ -8,7 +8,7 @@ stages:
   - stage: build
 
     jobs:
-    - job: 'BuildAndPush'
+    - job: 'build'
     
       pool:
         vmImage: 'ubuntu-latest'
