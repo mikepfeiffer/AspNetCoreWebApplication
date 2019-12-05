@@ -1,9 +1,6 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'ubuntu-latest'
-
 variables:
   buildConfiguration: 'Release'
 
@@ -12,9 +9,12 @@ stages:
 
     jobs:
     - job: 'BuildAndPush'
+    
       pool:
         vmImage: 'ubuntu-latest'
+
         steps:
+
         - task: DotNetCoreCLI@2
           displayName: 'dotnet restore'
           inputs:
